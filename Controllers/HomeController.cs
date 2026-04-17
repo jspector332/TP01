@@ -13,9 +13,23 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    Grupo grupo = new Grupo();
+
     public IActionResult Index()
     {
+        ViewBag.Integrantes = grupo.devolverIntegrantes();
         return View();
+    }
+    public IActionResult SelectIntegrante(int dni){
+        Dictionary<int,Integrante> dic = grupo.devolverIntegrantes();
+        if(dic.ContainsKey(dni)){
+            ViewBag.Integrante= dic[dni];
+            ViewBag.Dni= dni;
+            return View("infoIntegrante");
+        }
+        else{
+            
+        }
     }
 
     public IActionResult Privacy()
