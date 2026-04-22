@@ -23,12 +23,12 @@ public class HomeController : Controller
     public IActionResult SelectIntegrante(int dni){
         Dictionary<int,Integrante> dic = grupo.devolverIntegrantes();
         if(dic.ContainsKey(dni)){
-            ViewBag.Integrante= dic[dni];
-            ViewBag.Dni= dni;
-            return View("infoIntegrante");
+            ViewBag.Integrante = dic[dni];
+            ViewBag.Dni = dni;
+            return View("InfoIntegrante");
         }
         else{
-            
+            return RedirectToAction("Index");
         }
     }
 

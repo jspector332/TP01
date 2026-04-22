@@ -24,4 +24,21 @@ public class Integrante{
     public List<string> getIntereses(){
         return intereses;
     }
+
+    public int getDni(){
+        return this.dni;
+    }
+
+    public string getNombre(){
+        return this.nombre;
+    }
+
+    public int calcularEdad(){
+        DateTime hoy = DateTime.Today;
+        return hoy - this.fNacimiento;
+    }
+
+    public string getFoto(){
+        return this.foto + ".jpg"
+    }
 }

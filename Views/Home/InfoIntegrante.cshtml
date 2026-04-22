@@ -1,0 +1,23 @@
+<h2>@Viewbag.Integrante.getNombre()</h2>
+
+<p>DNI : @ViewBag.Integrante.getDni()</p>
+<p>Edad : @ViewBag.Integrante.calcularEdad()</p>
+<p>Familiares : </p>
+<p>
+<ul>
+@foreach (string familiar in ViewBag.Integrante.getFamiliares()){
+    <li>@familiar</li>
+}
+</ul>
+</p>
+<p>Intereses : </p>
+<p>
+<ul>
+@foreach (string interes in ViewBag.Integrante.getIntereses()){
+    <li>@interes</li>
+}
+</ul>
+</p>
+<p>
+<a href='@Url.Action("Index", "Home")'>Volver a Index</a>
+</p>
