@@ -6,7 +6,6 @@
 @foreach (Integrante Integrante in ViewBag.Integrantes){
     <li>
         <a href='@Url.Action("InfoIntegrante", "Home", new {dni = Integrante.getDni()})'>@Integrante.getFoto()</a>
-        
-    <li/>
+    </li>
 }
-<ul/>
+</ul>

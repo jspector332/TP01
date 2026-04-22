@@ -8,13 +8,13 @@ public class Integrante{
     List<string> familiares;
     List<string> intereses;
 
-    public Integrante(int dni, string nombre, DateTime fNacimiento, string foto, List<string> familiares, List<string> intereses){
+    public Integrante(int dni, string nombre, DateTime fNacimiento, string foto, List<string> familiaresPar, List<string> interesesPar){
         this.dni = dni;
         this.nombre = nombre;
-        this.fNacimiento = new DateTime(fNacimiento);
+        this.fNacimiento = fNacimiento;
         this.foto = foto;
-        List<string> familiares = new List<string>;
-        List<string> intereses = new List<string>;
+        List<string> familiares = new List<string>(familiaresPar);
+        List<string> intereses = new List<string>(interesesPar);
     }
 
     public List<string> getFamiliares(){
@@ -35,10 +35,11 @@ public class Integrante{
 
     public int calcularEdad(){
         DateTime hoy = DateTime.Today;
-        return hoy - this.fNacimiento;
+        int edad = hoy.Year - this.fNacimiento.Year;
+        return edad;
     }
 
     public string getFoto(){
-        return this.foto + ".jpg"
+        return this.foto + ".jpg";
     }
 }

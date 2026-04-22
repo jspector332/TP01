@@ -4,14 +4,20 @@ public class Grupo{
     private Dictionary<int,Integrante> dicIntegrantes;
 
     public Grupo(){
-        Dictionary<int,Integrante> dicIntegrantes = new Dictionary<int,Integrante>();
+        
         cargaDatosManual();
     }
 
     public void cargaDatosManual(){
-        dicIntegrantes.Add(1, new Integrante(1, "Paredes", (2009,02,25), "fotoParedes", getFamiliares().Add("Papa:Russo", "Mama:Silvia"), getIntereses().Add("Futbol", "Padel")));
-        dicIntegrantes.Add(2, new Integrante(2, "Drussi", (2018,12,09), "fotoDriussi", getFamiliares().Add("Papa:Chacho", "Mama:Romina"), getIntereses().Add("Futbol", "Lesionarse")));
-        dicIntegrantes.Add(3, new Integrante(3, "LaCobra", (2014,11,27), "fotoCobra", getFamiliares().Add("Papa:Julian Alvarez", "Mama:Teode412"), getIntereses().Add("Ver Futbol", "Stremear")));
+        dicIntegrantes = new Dictionary<int,Integrante>();
+        List<string> familiaresPar = new List<string> { "Russo", "Silvia" };
+        List<string> interesesPar = new List<string> { "Futbol", "Padel" };
+        List<string> familiaresDri = new List<string> { "Chacho", "Romina" };
+        List<string> interesesDri = new List<string> { "Futbol", "Lesionarse" };
+        DateTime nac1 = new DateTime(2009,02,25);
+        DateTime nac2 = new DateTime(2018,12,09);
+        dicIntegrantes.Add(1, new Integrante(1, "Paredes", nac1, "fotoParedes", familiaresPar, interesesPar));
+        dicIntegrantes.Add(2, new Integrante(2, "Drussi", nac2, "fotoDriussi", familiaresDri, interesesDri));
     }
 
     public Dictionary<int, Integrante> devolverIntegrantes(){
