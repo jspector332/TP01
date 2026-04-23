@@ -13,16 +13,16 @@ public class Integrante{
         this.nombre = nombre;
         this.fNacimiento = fNacimiento;
         this.foto = foto;
-        List<string> familiares = new List<string>(familiaresPar);
-        List<string> intereses = new List<string>(interesesPar);
+        familiares = new List<string>(familiaresPar);
+        intereses = new List<string>(interesesPar);
     }
 
     public List<string> getFamiliares(){
-        return familiares;
+        return this.familiares;
     }
 
     public List<string> getIntereses(){
-        return intereses;
+        return this.intereses;
     }
 
     public int getDni(){

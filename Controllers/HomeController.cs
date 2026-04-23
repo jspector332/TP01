@@ -20,6 +20,7 @@ public class HomeController : Controller
         ViewBag.Integrantes = grupo.devolverIntegrantes();
         return View();
     }
+    
     public IActionResult SelectIntegrante(int dni){
         Dictionary<int,Integrante> dic = grupo.devolverIntegrantes();
         if(dic.ContainsKey(dni)){

@@ -3,9 +3,9 @@
 }
 
 <ul>
-@foreach (Integrante Integrante in ViewBag.Integrantes){
+@foreach (Integrante Integrante in ViewBag.Integrantes.Values){
     <li>
-        <a href='@Url.Action("InfoIntegrante", "Home", new {dni = Integrante.getDni()})'>@Integrante.getFoto()</a>
+        <a href='@Url.Action("SelectIntegrante", "Home", new {dni = Integrante.getDni()})'><img src = @Integrante.getFoto() alt = ""></a>
     </li>
 }
 </ul>
