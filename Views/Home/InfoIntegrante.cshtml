@@ -1,18 +1,20 @@
 
 
 <h2>@ViewBag.Integrante.getNombre()</h2>
-<p>DNI : @ViewBag.Integrante.getDni()</p>
+<div class = "DNIedad">
+<p >DNI : @ViewBag.Integrante.getDni()</p>
 <p>Edad : @ViewBag.Integrante.calcularEdad()</p>
-<p>Familiares : </p>
+</div>
 
-
-<ul>
+<div class = "FyI">
+<p>Familiares </p>
+<ul >
 @foreach (string familiar in ViewBag.Integrante.getFamiliares()){
     <li>@familiar</li>
 }
 </ul>
 </p>
-<p>Intereses : </p>
+<p>Intereses </p>
 <p>
 <ul>
 @foreach (string interes in ViewBag.Integrante.getIntereses()){
@@ -20,6 +22,7 @@
 }
 </ul>
 </p>
-<p>
-<a href='@Url.Action("Index", "Home")'>Volver a Index</a>
+</div>
+<p class ="link">
+<a  href='@Url.Action("Index", "Home")'>Volver a Index</a>
 </p>

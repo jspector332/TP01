@@ -1,11 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<h1>TP1 : PRESENTACION DE GRUPO</h1>
 <ul>
 @foreach (Integrante Integrante in ViewBag.Integrantes.Values){
     <li>
-        <a href='@Url.Action("SelectIntegrante", "Home", new {dni = Integrante.getDni()})'><img src = @Integrante.getFoto() alt = ""></a>
+        <a href='@Url.Action("SelectIntegrante", "Home", new {dni = Integrante.getDni()})'><img class = "imagen" src = @Integrante.getFoto() alt = ""></a>
     </li>
 }
 </ul>

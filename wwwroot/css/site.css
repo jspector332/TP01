@@ -29,3 +29,57 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+ul li{
+  list-style: none;
+  font-size: large;
+}
+
+body{
+  background-color: rgb(224, 222, 211);
+}
+
+h1{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  font-weight: bold;
+}
+p{
+  font-size: xx-large;
+
+}
+h2{
+  text-align: center;
+}
+.imagen{
+  width: 30%;
+  float: right;
+  margin-right: 14.5%;
+  margin-top: 15%;
+}
+.link{
+ text-align: center;
+ margin-top: 30%;
+}
+.DNIedad{
+  width: 20%;
+}
+.DNIedad p{
+  margin-left: 10%;
+  margin-top: 40%;
+ 
+}
+
+.FyI{
+  width: 30%;
+  margin-left: 60%;
+  margin-top: 5%;
+}
+.FyI p{
+  margin-left: 80%;
+}
+.FyI ul li{
+  margin-left: 80%;
+}
+
